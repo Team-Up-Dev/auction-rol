@@ -1,18 +1,30 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
-import styles from './Item.module.css'
+import { Card, Image } from "react-bootstrap";
+import styles from "./Item.module.scss";
 
-export default function Item() {
-    console.log(styles)
+const icons = {
+  sword: require('../../assets/icons/sword-f.svg'),
+  longsword: require('../../assets/icons/longsword.svg')
+}
+
+export default function Item(props) {
   return (
-    <Card>
+    <Card className={styles.cardContainer}>
       <Card.Header className={styles.cardHead}></Card.Header>
-      <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
-        <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+      <Card.Body className={`${styles.cardBody} d-flex`}>
+        <div className={styles.leftColumn}>
+          <Image className={styles.itemImage} src={props.image} />
+        </div>
+        <div className={styles.rightColumn}>
+          <Card.Title className={`d-flex flex-row ${styles.cardTitle}`}>
+            <Image src={icons[props.category].default} className={styles.itemCategory} />
+            <span>{`${props.level && `Lv. ${props.level} `} ${props.title}`}</span>
+          </Card.Title>
+          <hr className={`w-100 ${styles.horizontalLine}`} />
+          <Card.Text className={`text-justify ${styles.cardDescription}`}>
+            {props.description}
+          </Card.Text>
+        </div>
       </Card.Body>
     </Card>
   );

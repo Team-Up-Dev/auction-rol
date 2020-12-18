@@ -1,0 +1,58 @@
+.cardContainer {
+    max-width: 320px;
+    margin: 0.75rem;
+    .cardHead {
+        background-image: linear-gradient(rgba(128, 170, 230, 1),
+                rgba(189, 229, 241, 1));
+        border-bottom: unset;
+    }
+
+    .cardBody{
+        $maxImage : 80px;
+        padding:1rem;
+        .leftColumn {
+            min-width: $maxImage;
+            width: 20%;
+            padding: 0;
+            .itemImage {
+                width: $maxImage;
+            }
+
+        }
+
+        .rightColumn {
+            width: 80%;
+            margin-left:1rem;
+            
+            .cardTitle {
+                font-size: 14px;
+                margin-bottom: .25rem;
+                font-weight: bold;
+                color:rgba(53,53,53,1);
+                white-space: nowrap;
+                display:flex;
+                align-items: center;
+                .itemCategory {
+                    background-color:rgba(109,158,214,1);
+                    fill:white;
+                    padding: 2px;
+                    margin-right: .5rem;
+                }
+            }
+             
+            .horizontalLine {
+                margin-top: 0rem;
+                margin-bottom: 0rem;
+                border: 0;
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .cardDescription {
+                font-size: 11px;
+                font-weight: bold;
+                color: rgba(151,151,151,1);
+            }
+        }
+    }
+}
+
