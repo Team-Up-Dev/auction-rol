@@ -37,7 +37,7 @@ export default function Item(props) {
       <Card.Body>
         <div className="d-flex justify-content-start flex-column">
           <div className="w-100">
-            <p className="d-flex align-items-center justify-content-between">
+            <p className="d-flex align-items-center justify-content-between mb-0">
               <span>
                 <AiFillCaretRight />
                 Stats
@@ -50,7 +50,7 @@ export default function Item(props) {
             </div>
           </div>
           <div className="w-100">
-            <p className="d-flex align-items-center justify-content-between">
+            <p className="d-flex align-items-center justify-content-between mb-0">
               <AiFillCaretRight />
               Stats
             </p>
@@ -60,7 +60,7 @@ export default function Item(props) {
             </div>
           </div>
           <div className="w-100">
-            <p className="d-flex align-items-center justify-content-between">
+            <p className="d-flex align-items-center justify-content-between mb-0">
               <AiFillCaretRight />
               Stats
             </p>
