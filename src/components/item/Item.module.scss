@@ -61,10 +61,16 @@
         .statusContainer {
             position: absolute;
             width:100%;
-            border: 1px solid rgba(151,151,151,0.3);
             height: inherit;
+            border: 1px solid rgba(151,151,151,0.3);
             border-radius: 0.25rem;
             background-image: linear-gradient(rgba(191,191,191,1),rgba(185,185,185,1));
+        }
+
+        .currentStatus {
+            position: absolute;
+            height: inherit;
+            border-radius: 0.25rem;
         }
     }
 }

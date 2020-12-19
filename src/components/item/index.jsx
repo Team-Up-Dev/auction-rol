@@ -8,6 +8,14 @@ const icons = {
 };
 
 export default function Item(props) {
+  const options = {
+    opt1 : props.maxOption1 && props.maxOption1/props.option1,
+    opt2 : props.maxOption2 && props.maxOption2/props.option2,
+    opt3 : props.maxOption3 && props.maxOption3/props.option3,
+    opt4 : props.maxOption4 && props.maxOption4/props.option4
+  };
+
+
   return (
     <Card className={styles.cardContainer}>
       <Card.Header className={styles.cardHead}></Card.Header>
@@ -46,7 +54,7 @@ export default function Item(props) {
             </p>
             <div className={`${styles.statusBar}`}>
               <div className={`${styles.statusContainer}`}></div>
-              <div></div>
+              <div style={{backgroundImage:`linear-gradient(rgba(191,191,191,1),rgba(185,185,185,1))`,width:`${options.opt1}%`}}className={`${styles.currentStatus}`}></div>
             </div>
           </div>
           <div className="w-100">
@@ -56,7 +64,7 @@ export default function Item(props) {
             </p>
             <div className={`${styles.statusBar}`}>
               <div className={`${styles.statusContainer}`}></div>
-              <div></div>
+              <div style={{backgroundImage:`linear-gradient(rgba(191,191,191,1),rgba(185,185,185,1))`,width:`${options.opt2}%`}}className={`${styles.currentStatus}`}></div>
             </div>
           </div>
           <div className="w-100">
@@ -66,7 +74,7 @@ export default function Item(props) {
             </p>
             <div className={`${styles.statusBar}`}>
               <div className={`${styles.statusContainer}`}></div>
-              <div></div>
+              <div style={{backgroundImage:`linear-gradient(rgba(191,191,191,1),rgba(185,185,185,1))`,width:`${options.opt3}%`}}className={`${styles.currentStatus}`}></div>
             </div>
           </div>
         </div>
