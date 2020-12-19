@@ -58,19 +58,27 @@
     .statusBar {
         height: 20px;
         position:relative;
+        display:flex;
+        align-items: center;
         .statusContainer {
             position: absolute;
             width:100%;
             height: inherit;
-            border: 1px solid rgba(151,151,151,0.3);
-            border-radius: 0.25rem;
+            border: 1px solid rgba(151,151,151,0.5);
+            border-radius: 0.4rem;
             background-image: linear-gradient(rgba(191,191,191,1),rgba(185,185,185,1));
         }
 
         .currentStatus {
             position: absolute;
             height: inherit;
-            border-radius: 0.25rem;
+            border-radius: 0.4rem;
+        }
+
+        .statusText {
+            position: absolute;
+            z-index: 999;
+            margin-left: 0.5rem
         }
     }
 }
