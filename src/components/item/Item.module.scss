@@ -54,5 +54,14 @@
             }
         }
     }
+
+    .statusBar {
+        height: 20px;
+        position:relative;
+        .statusContainer {
+            border: 1px solid rgba(151,151,151,0.3);
+            height: inherit;
+        }
+    }
 }
 
