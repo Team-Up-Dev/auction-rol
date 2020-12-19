@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Image } from "react-bootstrap";
 import styles from "./Item.module.scss";
+import {AiFillCaretRight} from 'react-icons/ai'
 const icons = {
   sword: require('../../assets/icons/sword-f.svg'),
   longsword: require('../../assets/icons/longsword.svg')
@@ -23,6 +24,20 @@ export default function Item(props) {
           <Card.Text className={`text-justify ${styles.cardDescription}`}>
             {props.description}
           </Card.Text>
+        </div>
+      </Card.Body>
+      <Card.Body>
+        <div className="w-100">
+          <div></div>
+          <div>BAR</div>
+        </div>
+        <div className="w-100">
+          <div></div>
+          <div></div>
+        </div>
+        <div className="w-100">
+          <div></div>
+          <div></div>
         </div>
       </Card.Body>
     </Card>
