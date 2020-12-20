@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Item from "./components/item";
 import { Container, Card } from "react-bootstrap";
 import FormPost from "./components/form";
+import StatusNavbar from './components/statusNavbar'
 
 const dummyData = [
   {
@@ -29,6 +30,7 @@ const dummyData = [
 function App() {
   return (
     <div className="App">
+      <StatusNavbar/>
       <Container>
         <div md={3}></div>
         <div md={8}>
