@@ -1,0 +1,11 @@
+$shadow-width: 0.25em;
+.navbarContainer {
+    position: relative;
+    top: -$shadow-width;
+    border-radius: 0px 0px 2rem 2rem;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px $shadow-width 1em;
+}
+
+.currencies {
+    width: 2rem;
+}
