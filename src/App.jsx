@@ -4,7 +4,6 @@ import Item from "./components/item";
 import { Container, Card } from "react-bootstrap";
 import FormPost from "./components/form";
 
-
 const dummyData = [
   {
     category:"longsword",
