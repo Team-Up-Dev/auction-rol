@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, Image } from "react-bootstrap";
 import styles from "./Item.module.scss";
-
 const icons = {
   sword: require('../../assets/icons/sword-f.svg'),
   longsword: require('../../assets/icons/longsword.svg')
@@ -13,7 +12,7 @@ export default function Item(props) {
       <Card.Header className={styles.cardHead}></Card.Header>
       <Card.Body className={`${styles.cardBody} d-flex`}>
         <div className={styles.leftColumn}>
-          <Image className={styles.itemImage} src={props.image} />
+          <img className={styles.itemImage} src={`/images/items/${props.type}/${props.title}.png`} />
         </div>
         <div className={styles.rightColumn}>
           <Card.Title className={`d-flex flex-row ${styles.cardTitle}`}>
