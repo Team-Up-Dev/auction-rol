@@ -4,6 +4,7 @@ import Item from "./components/item";
 import { Container, Card } from "react-bootstrap";
 import FormPost from "./components/form";
 import StatusNavbar from './components/statusNavbar'
+import RightSidebar from './components/rightSidebar'
 
 const dummyData = [
   {
@@ -57,6 +58,7 @@ function App() {
           </Card>
           <FormPost />
         </div>
+        <RightSidebar/>
       </Container>
     </div>
   );

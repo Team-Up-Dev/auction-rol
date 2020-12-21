@@ -1,0 +1,15 @@
+$shadow-width: 0.25em;
+
+.rightSidebarContainer {
+    position: fixed;
+    z-index: 999;
+    justify-content: flex-end;
+    align-items: center;
+    right:0;
+    top: 0;
+    height: 70vh;
+    margin: 15vh 0;
+    border-radius: 2rem 0 0 2rem;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px $shadow-width 1em;
+    transition: all 0.5 ease;
+}
