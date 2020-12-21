@@ -7,19 +7,23 @@ import zeny from "../../assets/currencies/zeny.png";
 import dust from "../../assets/currencies/dust.png";
 
 export default function StatusNavbar() {
-  const currencies = {
-    zeny: [7000000],
-    dust: [1500],
-  };
+  const currencies = [
+    { nick: "Main Character", zeny: 7000000, dust: 2000 },
+    { nick: "Main Character", zeny: 3000000, dust: 2000 },
+    { nick: "Main Character", zeny: 3000000, dust: 2000 },
+    { nick: "Archer 60", zeny: 6000000, dust: 2000 },
+  ];
 
   const totalZeny =
-    currencies.zeny.length > 2
-      ? currencies.zeny.reduce((a, b) => a + b)
+    currencies.length > 2
+      ? currencies.map(item => item.zeny).reduce((a, b) => a + b)
       : currencies.zeny[0];
+
   const totalDust =
-    currencies.dust.length > 2
-      ? currencies.dust.reduce((a, b) => a + b)
+    currencies.length > 2
+      ? currencies.map(item => item.dust).reduce((a, b) => a + b)
       : currencies.dust[0];
+  // console.log(totalZeny,totalDust)
   return (
     <Card className={`d-flex mx-5 mb-5 h-50 ${styles.navbarContainer}`}>
       <Card.Body className="d-flex justify-content-around">
@@ -40,12 +44,12 @@ export default function StatusNavbar() {
                   />
                 </Popover.Title>
                 <Popover.Content>
-                  {currencies.zeny.map((item, idx) => (
-                    <span className="d-flex align-items-center">
+                  {currencies.map((item, idx) => (
+                    <span className="d-flex align-items-center" key={idx}>
                       {idx + 1}
                       <FaAngleRight />
                       <NumberFormat
-                        value={item}
+                        value={item.zeny}
                         displayType={"text"}
                         thousandSeparator={"."}
                         decimalSeparator={","}
@@ -90,8 +94,20 @@ export default function StatusNavbar() {
                   />
                 </Popover.Title>
                 <Popover.Content>
-                  And here's some <strong>amazing</strong> content. It's very
-                  engaging. right?
+                  {currencies.map((item, idx) => (
+                    <span className="d-flex align-items-center" key={idx}>
+                      {idx + 1}
+                      <FaAngleRight />
+                      <NumberFormat
+                        value={item.dust}
+                        displayType={"text"}
+                        thousandSeparator={"."}
+                        decimalSeparator={","}
+                        prefix={""}
+                        renderText={(value) => <div>{value}</div>}
+                      />
+                    </span>
+                  ))}
                 </Popover.Content>
               </Popover>
             }

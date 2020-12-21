@@ -5,6 +5,7 @@ import { AiFillCaretRight } from "react-icons/ai";
 const icons = {
   sword: require("../../assets/icons/sword-f.svg"),
   longsword: require("../../assets/icons/longsword.svg"),
+  material: require("../../assets/icons/material.svg")
 };
 
 export default function Item(props) {
@@ -30,7 +31,7 @@ export default function Item(props) {
         <div className={styles.leftColumn}>
           <img
             className={styles.itemImage}
-            src={`/images/items/${props.type}/${props.title}.png`}
+            src={`/images/items/${props.type && props.type}/${props.title}.png`}
           />
         </div>
         <div className={styles.rightColumn}>
