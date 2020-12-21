@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, OverlayTrigger, Popover, Button } from "react-bootstrap";
 import { FaAngleRight } from "react-icons/fa";
 import NumberFormat from "react-number-format";
@@ -16,12 +16,12 @@ export default function StatusNavbar() {
 
   const totalZeny =
     currencies.length > 2
-      ? currencies.map(item => item.zeny).reduce((a, b) => a + b)
+      ? currencies.map((item) => item.zeny).reduce((a, b) => a + b)
       : currencies.zeny[0];
 
   const totalDust =
     currencies.length > 2
-      ? currencies.map(item => item.dust).reduce((a, b) => a + b)
+      ? currencies.map((item) => item.dust).reduce((a, b) => a + b)
       : currencies.dust[0];
   // console.log(totalZeny,totalDust)
   return (

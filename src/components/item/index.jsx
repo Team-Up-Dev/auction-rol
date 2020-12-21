@@ -5,7 +5,7 @@ import { AiFillCaretRight } from "react-icons/ai";
 const icons = {
   sword: require("../../assets/icons/sword-f.svg"),
   longsword: require("../../assets/icons/longsword.svg"),
-  material: require("../../assets/icons/material.svg")
+  material: require("../../assets/icons/material.svg"),
 };
 
 export default function Item(props) {
@@ -52,94 +52,110 @@ export default function Item(props) {
       </Card.Body>
       <Card.Body>
         <div className="d-flex justify-content-start flex-column">
-          <div className="w-100">
-            <p className="d-flex align-items-center justify-content-between mb-0">
-              <span>
-                <AiFillCaretRight />
-                <span className="font-weight-bold">{props.optionName1}</span>
-              </span>
-              <span>MAX +{props.maxOption1}</span>
-            </p>
-            <div className={`${styles.statusBar}`}>
-              <div className={`${styles.statusContainer}`}></div>
-              <div
-                style={{
-                  backgroundImage: `linear-gradient(${statusBarColor(
-                    options.opt1
-                  )})`,
-                  width: `${options.opt1}%`,
-                }}
-                className={`${styles.currentStatus}`}
-              ></div>
-              <span className={`font-weight-bold ${styles.statusText}`}>{props.option1}</span>
+          {props.maxOption1 && (
+            <div className="w-100">
+              <p className="d-flex align-items-center justify-content-between mb-0">
+                <span>
+                  <AiFillCaretRight />
+                  <span className="font-weight-bold">{props.optionName1}</span>
+                </span>
+                <span>MAX +{props.maxOption1}</span>
+              </p>
+              <div className={`${styles.statusBar}`}>
+                <div className={`${styles.statusContainer}`}></div>
+                <div
+                  style={{
+                    backgroundImage: `linear-gradient(${statusBarColor(
+                      options.opt1
+                    )})`,
+                    width: `${options.opt1}%`,
+                  }}
+                  className={`${styles.currentStatus}`}
+                ></div>
+                <span className={`font-weight-bold ${styles.statusText}`}>
+                  {props.option1}
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="w-100">
-            <p className="d-flex align-items-center justify-content-between mb-0">
-              <span>
-                <AiFillCaretRight />
-                <span className="font-weight-bold">{props.optionName2}</span>
-              </span>
-              <span>MAX +{props.maxOption2}</span>
-            </p>
-            <div className={`${styles.statusBar}`}>
-              <div className={`${styles.statusContainer}`}></div>
-              <div
-                style={{
-                  backgroundImage: `linear-gradient(${statusBarColor(
-                    options.opt2
-                  )})`,
-                  width: `${options.opt2}%`,
-                }}
-                className={`${styles.currentStatus}`}
-              ></div>
-              <span className={`font-weight-bold ${styles.statusText}`}>{props.option2}</span>
+          )}
+          {props.maxOption2 && (
+            <div className="w-100">
+              <p className="d-flex align-items-center justify-content-between mb-0">
+                <span>
+                  <AiFillCaretRight />
+                  <span className="font-weight-bold">{props.optionName2}</span>
+                </span>
+                <span>MAX +{props.maxOption2}</span>
+              </p>
+              <div className={`${styles.statusBar}`}>
+                <div className={`${styles.statusContainer}`}></div>
+                <div
+                  style={{
+                    backgroundImage: `linear-gradient(${statusBarColor(
+                      options.opt2
+                    )})`,
+                    width: `${options.opt2}%`,
+                  }}
+                  className={`${styles.currentStatus}`}
+                ></div>
+                <span className={`font-weight-bold ${styles.statusText}`}>
+                  {props.option2}
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="w-100">
-            <p className="d-flex align-items-center justify-content-between mb-0">
-              <span>
-                <AiFillCaretRight />
-                <span className="font-weight-bold">{props.optionName3}</span>
-              </span>
-              <span>MAX +{props.maxOption3}</span>
-            </p>
-            <div className={`${styles.statusBar}`}>
-              <div className={`${styles.statusContainer}`}></div>
-              <div
-                style={{
-                  backgroundImage: `linear-gradient(${statusBarColor(
-                    options.opt3
-                  )})`,
-                  width: `${options.opt3}%`,
-                }}
-                className={`${styles.currentStatus}`}
-              ></div>
-              <span className={`font-weight-bold ${styles.statusText}`}>{props.option3}</span>
+          )}
+          {props.maxOption3 && (
+            <div className="w-100">
+              <p className="d-flex align-items-center justify-content-between mb-0">
+                <span>
+                  <AiFillCaretRight />
+                  <span className="font-weight-bold">{props.optionName3}</span>
+                </span>
+                <span>MAX +{props.maxOption3}</span>
+              </p>
+              <div className={`${styles.statusBar}`}>
+                <div className={`${styles.statusContainer}`}></div>
+                <div
+                  style={{
+                    backgroundImage: `linear-gradient(${statusBarColor(
+                      options.opt3
+                    )})`,
+                    width: `${options.opt3}%`,
+                  }}
+                  className={`${styles.currentStatus}`}
+                ></div>
+                <span className={`font-weight-bold ${styles.statusText}`}>
+                  {props.option3}
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="w-100">
-            <p className="d-flex align-items-center justify-content-between mb-0">
-              <span>
-                <AiFillCaretRight />
-                <span className="font-weight-bold">{props.optionName4}</span>
-              </span>
-              <span>MAX +{props.maxOption4}</span>
-            </p>
-            <div className={`${styles.statusBar}`}>
-              <div className={`${styles.statusContainer}`}></div>
-              <div
-                style={{
-                  backgroundImage: `linear-gradient(${statusBarColor(
-                    options.opt4
-                  )})`,
-                  width: `${options.opt4}%`,
-                }}
-                className={`${styles.currentStatus}`}
-              ></div>
-              <span className={`font-weight-bold ${styles.statusText}`}>{props.option4}</span>
+          )}
+          {props.maxOption4 && (
+            <div className="w-100">
+              <p className="d-flex align-items-center justify-content-between mb-0">
+                <span>
+                  <AiFillCaretRight />
+                  <span className="font-weight-bold">{props.optionName4}</span>
+                </span>
+                <span>MAX +{props.maxOption4}</span>
+              </p>
+              <div className={`${styles.statusBar}`}>
+                <div className={`${styles.statusContainer}`}></div>
+                <div
+                  style={{
+                    backgroundImage: `linear-gradient(${statusBarColor(
+                      options.opt4
+                    )})`,
+                    width: `${options.opt4}%`,
+                  }}
+                  className={`${styles.currentStatus}`}
+                ></div>
+                <span className={`font-weight-bold ${styles.statusText}`}>
+                  {props.option4}
+                </span>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </Card.Body>
     </Card>

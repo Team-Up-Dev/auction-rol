@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./rightSidebar.module.scss";
 import NumberFormat from "react-number-format";
 import { FaAngleRight } from "react-icons/fa";
 import { Card, OverlayTrigger, Popover } from "react-bootstrap";
+import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/ai";
 
 export default function RightSidebar() {
+  const [closeState, setCloseState] = useState(false);
+
   const materials = [
     {
       nick: "Main Character",
@@ -85,16 +88,21 @@ export default function RightSidebar() {
       : materials.topaz[0];
 
   return (
-    <div className={`${styles.rightSidebarContainer} card`}>
+    <div className={`${styles.rightSidebarContainer} card  ${closeState ? styles.closeDiv : ""}`}>
       <div className={`${styles.rightSidebarContent}`}>
+        <div className={`${styles.trigger} card`} onClick={() => {
+            setCloseState(!closeState)
+        }}>{closeState ? <AiOutlineDoubleLeft/> : <AiOutlineDoubleRight/> }</div>
         {materialsName.map((material) => (
-          <div className="d-flex align-items-center">
+          <div className={`d-flex align-items-center`}>
             <OverlayTrigger
-              placement="bottom"
-              delay={{ show: 0, hide: 200 }}
+              placement="left"
+              style={{ width: "500px" }}
+              delay={{ show: 0, hide: 50 }}
               overlay={
-                <Popover id="popover-basic">
-                  <Popover.Title as="h3">
+                <Popover id="popover-basic" style={{ width: "content" }}>
+                  <Popover.Title className="d-flex" as="h3">
+                    <span style={{ marginRight: "0.25rem" }}>{material}</span>
                     <NumberFormat
                       value={eval(`total${material}`)}
                       displayType={"text"}

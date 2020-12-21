@@ -10,6 +10,7 @@
     .cardBody{
         $maxImage : 80px;
         padding:1rem;
+        flex: unset;
         .leftColumn {
             min-width: $maxImage;
             width: 20%;
