@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-eval */
 import React, { useState } from "react";
 import styles from "./rightSidebar.module.scss";
 import NumberFormat from "react-number-format";
 import { FaAngleRight } from "react-icons/fa";
-import { Card, OverlayTrigger, Popover } from "react-bootstrap";
+import {  OverlayTrigger, Popover } from "react-bootstrap";
 import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/ai";
 
 export default function RightSidebar() {
@@ -46,7 +48,7 @@ export default function RightSidebar() {
       topaz: 1000,
     },
   ];
-  let amethyst = 33;
+
   const materialsName = [
     "Amethyst",
     "Emerald",
@@ -93,8 +95,8 @@ export default function RightSidebar() {
         <div className={`${styles.trigger} card`} onClick={() => {
             setCloseState(!closeState)
         }}>{closeState ? <AiOutlineDoubleLeft/> : <AiOutlineDoubleRight/> }</div>
-        {materialsName.map((material) => (
-          <div className={`d-flex align-items-center`}>
+        {materialsName.map((material,key) => (
+          <div key={key} className={`d-flex align-items-center`}>
             <OverlayTrigger
               placement="left"
               style={{ width: "500px" }}

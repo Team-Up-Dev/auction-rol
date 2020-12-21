@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Card, OverlayTrigger, Popover, Button } from "react-bootstrap";
+import React from "react";
+import { Card, OverlayTrigger, Popover } from "react-bootstrap";
 import { FaAngleRight } from "react-icons/fa";
 import NumberFormat from "react-number-format";
 import styles from "./statusNavbar.module.scss";

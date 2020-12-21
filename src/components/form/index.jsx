@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React,{useState} from "react";
 import {
   ButtonGroup,
@@ -5,21 +6,16 @@ import {
   Form,
   ToggleButton,
   Button,
-  Image,
-  Col,
   Modal,
-  InputGroup,
 } from "react-bootstrap";
 import Swal from "sweetalert2";
 
 export default function FormWarehouse() {
   const [modalShow, setModal] = useState(false);
   const modalHandle = () => {
-    setData({});
     setModal(false);
   };
-
-  const [data, setData] = useState(null);
+  
   const WareHouseModal = (props) => {
     const [highlight, setHighlight] = useState(0);
     const [petData, setPetData] = useState({});
@@ -54,7 +50,7 @@ export default function FormWarehouse() {
         </Modal.Header>
         <Modal.Body className="d-flex f-col mx-3">
           <Card
-            className={`m-3 ${highlight == 1 ? "selected-option-form" : ""}`}
+            className={`m-3 ${highlight === 1 ? "selected-option-form" : ""}`}
             onClick={() => {
               setHighlight(1);
               setPetData({ ...petData, type: "Dog" });
@@ -67,7 +63,7 @@ export default function FormWarehouse() {
               setHighlight(2);
               setPetData({ ...petData, type: "Cat" });
             }}
-            className={`m-3 ${highlight == 2 ? "selected-option-form" : ""}`}
+            className={`m-3 ${highlight === 2 ? "selected-option-form" : ""}`}
           >
             <Card.Title className="text-center">Cat</Card.Title>
           </Card>
@@ -92,16 +88,16 @@ export default function FormWarehouse() {
                 <ToggleButton
                   key={1}
                   type="radio"
-                  variant={petData.gender == "true" ? "primary" : ""}
+                  variant={petData.gender === "true" ? "primary" : ""}
                   name="gender"
                   value={true}
-                  checked={petData.gender == true}
+                  checked={petData.gender === true}
                   onChange={(e) =>
                     setPetData({ ...petData, gender: e.currentTarget.value })
                   }
                 >
                   <span
-                    className={petData.gender == "false" ? "text-white" : ""}
+                    className={petData.gender === "false" ? "text-white" : ""}
                   >
                     Male
                   </span>
@@ -109,16 +105,16 @@ export default function FormWarehouse() {
                 <ToggleButton
                   key={2}
                   type="radio"
-                  variant={petData.gender == "false" ? "pink" : ""}
+                  variant={petData.gender === "false" ? "pink" : ""}
                   name="gender"
                   value={false}
-                  checked={petData.gender == "false"}
+                  checked={petData.gender === "false"}
                   onChange={(e) =>
                     setPetData({ ...petData, gender: e.currentTarget.value })
                   }
                 >
                   <span
-                    className={petData.gender == "true" ? "text-white" : ""}
+                    className={petData.gender === "true" ? "text-white" : ""}
                   >
                     Female
                   </span>

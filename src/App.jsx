@@ -2,7 +2,6 @@ import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Item from "./components/item";
 import { Container, Card } from "react-bootstrap";
-import FormPost from "./components/form";
 import StatusNavbar from "./components/statusNavbar";
 import RightSidebar from "./components/rightSidebar";
 
@@ -65,8 +64,8 @@ function App() {
         <div md={3}></div>
         <div md={8}>
           <Card className="p-1 d-flex flex-row flex-wrap justify-content-center">
-            {dummyData.map((item) => (
-              <Item {...item} />
+            {dummyData.map((item,key) => (
+              <Item key={key} {...item} />
             ))}
           </Card>
           {/* <FormPost /> */}
