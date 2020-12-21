@@ -76,7 +76,7 @@ export default function Item(props) {
       <Card.Header className={styles.cardHead}></Card.Header>
       <Card.Body className={`${styles.cardBody} d-flex`}>
         <div className={styles.leftColumn}>
-          <img alt={"image"}
+          <img alt={"itemImage"}
             className={styles.itemImage}
             src={`/images/items/${props.type && props.type}/${props.title}.png`}
           />
