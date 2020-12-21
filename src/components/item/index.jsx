@@ -9,11 +9,58 @@ const icons = {
 };
 
 export default function Item(props) {
+  const processed = {
+    option1:
+      props.option1 && props.option1.length && props.option1.includes("%")
+        ? props.option1.slice(0, -1)
+        : props.option1,
+    option2:
+      props.option2 && props.option2.length && props.option2.includes("%")
+        ? props.option2.slice(0, -1)
+        : props.option2,
+    option3:
+      props.option3 && props.option3.length && props.option3.includes("%")
+        ? props.option3.slice(0, -1)
+        : props.option3,
+    option4:
+      props.option4 && props.option4.length && props.option4.includes("%")
+        ? props.option4.slice(0, -1)
+        : props.option4,
+    maxOption1:
+      props.maxOption1 &&
+      props.maxOption1.length &&
+      props.maxOption1.includes("%")
+        ? props.maxOption1.slice(0, -1)
+        : props.maxOption1,
+    maxOption2:
+      props.maxOption2 &&
+      props.maxOption2.length &&
+      props.maxOption2.includes("%")
+        ? props.maxOption2.slice(0, -1)
+        : props.maxOption2,
+    maxOption3:
+      props.maxOption3 &&
+      props.maxOption3.length &&
+      props.maxOption3.includes("%")
+        ? props.maxOption3.slice(0, -1)
+        : props.maxOption3,
+    maxOption4:
+      props.maxOption4 &&
+      props.maxOption4.length &&
+      props.maxOption4.includes("%")
+        ? props.maxOption4.slice(0, -1)
+        : props.maxOption4,
+  };
+
   const options = {
-    opt1: props.maxOption1 && (props.option1 / props.maxOption1) * 100,
-    opt2: props.maxOption2 && (props.option2 / props.maxOption2) * 100,
-    opt3: props.maxOption3 && (props.option3 / props.maxOption3) * 100,
-    opt4: props.maxOption4 && (props.option4 / props.maxOption4) * 100,
+    opt1:
+      processed.maxOption1 && (processed.option1 / processed.maxOption1) * 100,
+    opt2:
+      processed.maxOption2 && (processed.option2 / processed.maxOption2) * 100,
+    opt3:
+      processed.maxOption3 && (processed.option3 / processed.maxOption3) * 100,
+    opt4:
+      processed.maxOption4 && (processed.option4 / processed.maxOption4) * 100,
   };
 
   console.log(options);
@@ -158,6 +205,14 @@ export default function Item(props) {
           )}
         </div>
       </Card.Body>
+      {props.qc && (
+        <Card.Body className={`${styles.cardQualityBody} d-flex justify-content-center align-items-center`}>
+          <span className={`${styles.badge}`}>Card Quality</span>
+          <div className={`${styles.qualityCard} border h1 w-50 d-flex align-items-center justify-content-center`}>
+            {props.qc && `${props.qc}%`}
+          </div>
+        </Card.Body>
+      )}
     </Card>
   );
 }

@@ -41,6 +41,24 @@ const dummyData = [
     optionName1: "ATK",
     optionName2: "ATK",
     optionName3: "Critical Dmg Inc.",
+    qc: 56
+  },
+  {
+    type:"cards",
+    category:"longsword",
+    level:20,
+    title:"Wolf Card",
+    description:"Card that can be Equiped on specific part of a Gear",
+    option1: 112,
+    option2: "2.25%",
+    option3: "3.6%",
+    maxOption1: 231,
+    maxOption2: "3.5%",
+    maxOption3: "4.2%",
+    optionName1: "ATK",
+    optionName2: "ATK",
+    optionName3: "Critical Dmg Inc.",
+    qc: 41
   }
 ];
 
