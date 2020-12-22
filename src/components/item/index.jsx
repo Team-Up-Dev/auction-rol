@@ -3,6 +3,7 @@ import { Card, Image } from "react-bootstrap";
 import styles from "./Item.module.scss";
 import { AiFillCaretRight } from "react-icons/ai";
 const icons = {
+  all : require("../../assets/icons/all.svg"),
   sword: require("../../assets/icons/sword-f.svg"),
   longsword: require("../../assets/icons/longsword.svg"),
   material: require("../../assets/icons/material.svg"),
