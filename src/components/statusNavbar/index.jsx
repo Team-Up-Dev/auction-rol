@@ -9,7 +9,7 @@ import dust from "../../assets/currencies/dust.png";
 export default function StatusNavbar() {
   const currencies = [
     { nick: "Main Character", zeny: 7000000, dust: 2000 },
-    { nick: "Main Character", zeny: 3000000, dust: 2000 },
+    { nick: "Assassin Character", zeny: 4000000, dust: 2000 },
     { nick: "Main Character", zeny: 3000000, dust: 2000 },
     { nick: "Archer 60", zeny: 6000000, dust: 2000 },
   ];
