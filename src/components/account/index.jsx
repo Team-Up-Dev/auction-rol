@@ -1,10 +1,19 @@
 import React from 'react'
+import {Card} from 'react-bootstrap'
 
 export default function Account() {
     return (
         <div>
-            <div className="col-4"></div>
-            <div className="col-8"></div>
+            <Card>
+                <Card.Header>
+                    <Card.Title>DD</Card.Title>
+                </Card.Header>
+                <Card.Body></Card.Body>
+                <Card.Header>
+                    <Card.Title>GG</Card.Title>
+                </Card.Header>
+                <Card.Body></Card.Body>
+            </Card>
         </div>
     )
 }
