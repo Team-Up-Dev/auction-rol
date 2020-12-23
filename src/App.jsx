@@ -55,11 +55,11 @@ const dummyData = [
     qc: 47,
   },
   {
-    type:"cards",
-    category:"longsword",
-    level:10,
-    title:"Eclipse Card",
-    description:"Card that can be Equiped on specific part of a Gear",
+    type: "cards",
+    category: "longsword",
+    level: 10,
+    title: "Eclipse Card",
+    description: "Card that can be Equiped on specific part of a Gear",
     option1: 26,
     option2: 11,
     option3: 15.75,
@@ -74,11 +74,11 @@ const dummyData = [
     optionName4: "STR",
   },
   {
-    type:"cards",
-    category:"all",
-    level:30,
-    title:"Mastering Card",
-    description:"Card that can be Equiped on specific part of a Gear",
+    type: "cards",
+    category: "all",
+    level: 30,
+    title: "Mastering Card",
+    description: "Card that can be Equiped on specific part of a Gear",
     option1: 107,
     option2: 118,
     option3: 118,
@@ -93,11 +93,11 @@ const dummyData = [
     optionName4: "Default Stats",
   },
   {
-    type:"cards",
-    category:"all",
-    level:30,
-    title:"Mastering Card",
-    description:"Card that can be Equiped on specific part of a Gear",
+    type: "cards",
+    category: "all",
+    level: 30,
+    title: "Mastering Card",
+    description: "Card that can be Equiped on specific part of a Gear",
     option1: 107,
     option2: 118,
     option3: 118,
@@ -112,11 +112,11 @@ const dummyData = [
     optionName4: "Default Stats",
   },
   {
-    type:"cards",
-    category:"all",
-    level:30,
-    title:"Mastering Card",
-    description:"Card that can be Equiped on specific part of a Gear",
+    type: "cards",
+    category: "all",
+    level: 30,
+    title: "Mastering Card",
+    description: "Card that can be Equiped on specific part of a Gear",
     option1: 107,
     option2: 118,
     option3: 118,
@@ -129,12 +129,13 @@ const dummyData = [
     optionName2: "M.ATK",
     optionName3: "HP",
     optionName4: "Default Stats",
-  },{
-    type:"cards",
-    category:"all",
-    level:30,
-    title:"Mastering Card",
-    description:"Card that can be Equiped on specific part of a Gear",
+  },
+  {
+    type: "cards",
+    category: "all",
+    level: 30,
+    title: "Mastering Card",
+    description: "Card that can be Equiped on specific part of a Gear",
     option1: 107,
     option2: 118,
     option3: 118,
@@ -147,7 +148,7 @@ const dummyData = [
     optionName2: "M.ATK",
     optionName3: "HP",
     optionName4: "Default Stats",
-  }
+  },
 ];
 
 function App() {
@@ -158,7 +159,7 @@ function App() {
         <div md={3}></div>
         <div md={8}>
           <Card className="p-1 d-flex flex-row flex-wrap justify-content-center">
-            {dummyData.map((item,key) => (
+            {dummyData.map((item, key) => (
               <Item key={key} {...item} />
             ))}
           </Card>
